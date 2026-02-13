@@ -31,7 +31,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      # 5️⃣ Login to ECR
+      # 5️⃣ Login to Amazon ECR
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v1
 
@@ -47,9 +47,7 @@ jobs:
       - name: Push Docker image to ECR
         run: docker push 228948463033.dkr.ecr.us-east-1.amazonaws.com/github_action_pro:latest
 
-      
-
-      # 1️⃣1️⃣ Deploy/update on EKS
+      # 9️⃣ Deploy/update on EKS
       - name: Deploy to EKS
         run: |
           aws eks update-kubeconfig --region us-east-1 --name ECR-cluster
