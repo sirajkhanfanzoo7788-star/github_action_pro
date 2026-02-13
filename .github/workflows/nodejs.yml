@@ -47,13 +47,7 @@ jobs:
       - name: Push Docker image to ECR
         run: docker push 228948463033.dkr.ecr.us-east-1.amazonaws.com/github_action_pro:latest
 
-      # 9️⃣ Install AWS CLI
-      - name: Install AWS CLI
-        run: |
-          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip awscliv2.zip
-          sudo ./aws/install
-          aws --version
+      
 
       # 🔟 Install kubectl
       - name: Install kubectl
