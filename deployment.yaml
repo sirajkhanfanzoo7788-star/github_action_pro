@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,8 +17,3 @@ spec:
           image: 228948463033.dkr.ecr.us-east-1.amazonaws.com/github_action_pro:latest
           ports:
             - containerPort: 5000
-
-
-
-
-           
