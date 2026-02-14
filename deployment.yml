@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -13,7 +14,7 @@ spec:
         app: github-action-pro
     spec:
       containers:
-      - name: github-action-pro
-        image: 228948463033.dkr.ecr.us-east-1.amazonaws.com/github_action_pro:latest
-        ports:
-        - containerPort: 5000
+        - name: github-action-pro
+          image: 228948463033.dkr.ecr.us-east-1.amazonaws.com/github_action_pro:latest
+          ports:
+            - containerPort: 5000
